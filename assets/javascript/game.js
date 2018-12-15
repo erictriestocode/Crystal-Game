@@ -1,5 +1,5 @@
 
-$(window).load(function() {
+$(window).load(function () {
     console.log("it works!");
 
     var redVal = 0;
@@ -8,7 +8,9 @@ $(window).load(function() {
     var yellowVal = 0;
     // user number
     var userNumber = 0;
+    var computerNumber = Math.floor((Math.random() * 12) + 1);
 
+    // .textupdate
 
     redCrystal();
     blueCrystal();
@@ -39,6 +41,10 @@ $(window).load(function() {
         console.log("yellow");
         yellowVal = Math.floor((Math.random() * 12) + 1);
         console.log(yellowVal);
+    }
+
+    function resetGame() {
+        userNumber = 0;
     }
 
 });

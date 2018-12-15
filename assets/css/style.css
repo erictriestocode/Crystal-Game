@@ -6,3 +6,15 @@
     text-align: center;
     margin: auto;
 }
+
+.scoreboard{
+    display:flex;
+}
+
+.buttons {
+    display:flex;
+}
+
+.footer{
+    font-family: 'Righteous', cursive; 
+}

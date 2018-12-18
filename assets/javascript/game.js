@@ -1,5 +1,5 @@
-
-$(window).load(function () {
+// Run on DOM load
+$(document).ready(function () {
     console.log("it works!");
 
     var redVal = 0;
@@ -8,17 +8,30 @@ $(window).load(function () {
     var yellowVal = 0;
     // user number
     var userNumber = 0;
-    var computerNumber = Math.floor((Math.random() * 12) + 1);
+    // var computerNumber = 0;   // vestigal
+    var computerGuess;
+    console.log(computerNumber);
+    compNum();
+    console.log(computerGuess);
 
-    // .textupdate
+    console.log(computerNumber);
+    
 
-    redCrystal();
-    blueCrystal();
-    greenCrystal();
-    yellowCrystal();
+
+
+
+
+
+
+
 
     // Game Functions
     //****************************************/
+
+    function compNum() {
+        computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
+    }
+
     function redCrystal() {
         console.log("Red");
         redVal = Math.floor((Math.random() * 12) + 1);

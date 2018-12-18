@@ -2,6 +2,7 @@
 $(document).ready(function () {
     console.log("it works!");
 
+
     var redVal = 0;
     var blueVal = 0;
     var greenVal = 0;
@@ -14,7 +15,7 @@ $(document).ready(function () {
     compNum();
     console.log(computerGuess);
 
-    console.log(computerNumber);
+    
     
 
 

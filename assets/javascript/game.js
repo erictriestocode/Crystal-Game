@@ -27,40 +27,34 @@ $(document).ready(function () {
     console.log(greenVal);
     console.log(yellowVal);
 
-    $("#redbutton").on("click", function() {
-        console.log('you clicked red!')
-        userNumber = redVal + userNumber;
-        $("#userNum").html('User Guess: ' + userNumber);
-    });
 
-    $("#bluebutton").on("click", function() {
-        console.log('you clicked blue!')
-        userNumber = blueVal + userNumber;
-        $("#userNum").html('User Guess: ' + userNumber);
-    });
+    // if (userNumber === computerGuess) {
+    //     alert('You win!');
+    //     wins++;
+    //     resetGame();
+    // } else if (userNumber > computerGuess){
+    //     alert('Ya Blew it!');
+    //     losses++;
+    // }
 
-    $("#greenbutton").on("click", function() {
-        console.log('you clicked green!')
-        userNumber = greenVal + userNumber;
-        $("#userNum").html('User Guess: ' + userNumber);
-    });
+    // $("resetButton").on("click", function() {
+    //     console.log("Reset Clicked");
+    //     resetGame();
+    // });
 
-    $("#yellowbutton").on("click", function() {
-        console.log('you clicked yellow!')
-        userNumber = yellowVal + userNumber;
-        $("#userNum").html('User Guess: ' + userNumber);
-    });
+    // look up calculator solution!
 
-    if (userNumber === computerGuess) {
-        alert('You win!');
+    if (userNumber < computerGuess ) {
+        buttonClicks();
+    } else if ( userNumber === computerGuess) {
+        alert("You win!");
         wins++;
         resetGame();
-    } else if (userNumber > computerGuess){
-        alert('Ya Blew it!');
+    } else {
+        alert('You Lose!')
         losses++;
+        resetGame();
     }
-
-// look up calculator solution!
 
 
 
@@ -71,6 +65,33 @@ $(document).ready(function () {
     // have the computer guess its number
     function compNum() {
         computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
+    }
+
+    // Main Game Operation
+    function buttonClicks() {
+        $("#redbutton").on("click", function () {
+            console.log('you clicked red!')
+            userNumber = redVal + userNumber;
+            $("#userNum").html('User Guess: ' + userNumber);
+        });
+
+        $("#bluebutton").on("click", function () {
+            console.log('you clicked blue!')
+            userNumber = blueVal + userNumber;
+            $("#userNum").html('User Guess: ' + userNumber);
+        });
+
+        $("#greenbutton").on("click", function () {
+            console.log('you clicked green!')
+            userNumber = greenVal + userNumber;
+            $("#userNum").html('User Guess: ' + userNumber);
+        });
+
+        $("#yellowbutton").on("click", function () {
+            console.log('you clicked yellow!')
+            userNumber = yellowVal + userNumber;
+            $("#userNum").html('User Guess: ' + userNumber);
+        });
     }
 
     function redCrystal() {

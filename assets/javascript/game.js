@@ -20,8 +20,8 @@ $(document).ready(function () {
     resetGame();
     $("#compNum").html('Computer Guess: ' + computerGuess);
     $("#userNum").html('User Guess: ' + userNumber);
-    $(".wins").html('Wins: ' + wins);
-    $(".losses").html('Losses: ' + losses);
+    $("#wins").html('Wins: ' + wins);
+    $("#losses").html('Losses: ' + losses);
     console.log(redVal);
     console.log(blueVal);
     console.log(greenVal);
@@ -31,20 +31,35 @@ $(document).ready(function () {
         console.log('you clicked red!')
         userNumber = redVal + userNumber;
         $("#userNum").html('User Guess: ' + userNumber);
-        // if (firstclick = true) {
-        //     resetGame();
-        //     userNumber =  userNumber + redVal;
-        //     firstClick = false;
-        // } else {
-        //     userNumber = userNumber + redVal;
-        //  }
     });
 
-    // if (userNumber > computerGuess) {
-    //     alert("You lose!");
-    //     losses++;
-    // }
-  
+    $("#bluebutton").on("click", function() {
+        console.log('you clicked blue!')
+        userNumber = blueVal + userNumber;
+        $("#userNum").html('User Guess: ' + userNumber);
+    });
+
+    $("#greenbutton").on("click", function() {
+        console.log('you clicked green!')
+        userNumber = greenVal + userNumber;
+        $("#userNum").html('User Guess: ' + userNumber);
+    });
+
+    $("#yellowbutton").on("click", function() {
+        console.log('you clicked yellow!')
+        userNumber = yellowVal + userNumber;
+        $("#userNum").html('User Guess: ' + userNumber);
+    });
+
+    if (userNumber === computerGuess) {
+        alert('You win!');
+        wins++;
+        resetGame();
+    } else if (userNumber > computerGuess){
+        alert('Ya Blew it!');
+        losses++;
+    }
+
 // look up calculator solution!
 
 
@@ -53,6 +68,7 @@ $(document).ready(function () {
     // Game Functions
     //****************************************/
 
+    // have the computer guess its number
     function compNum() {
         computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
     }

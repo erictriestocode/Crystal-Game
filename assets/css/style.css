@@ -1,6 +1,6 @@
 .title {
     font-family: 'Righteous', cursive;
-    margin: 80px;
+    margin: 2em;
 }
 
 .mainBody {
@@ -11,23 +11,23 @@
 .scoreboard{
     display:flex;
     justify-content: center;
-    align-content: space-around;
+    align-content: space-between;
     margin: 2em;
 
 }
 
 #compNum {
-    
+    margin: 1em;
 }
 
 #userNum {
-    
+    margin: 1em;
 }
 
 .buttons {
     display:flex;
     justify-content: center;
-    margin: 70px;
+    margin: 2em;
 
 }
 
@@ -53,4 +53,12 @@
     display: flex;
     justify-content: center;
     margin: 1em
+}
+
+#wins {
+    margin: 1em;
+}
+
+#losses {
+    margin: 1em;
 }

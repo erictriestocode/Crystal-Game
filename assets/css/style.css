@@ -1,5 +1,6 @@
 .title {
     font-family: 'Righteous', cursive;
+    margin: 80px;
 }
 
 .mainBody {
@@ -10,18 +11,46 @@
 .scoreboard{
     display:flex;
     justify-content: center;
+    align-content: space-around;
+    margin: 2em;
 
+}
+
+#compNum {
+    
+}
+
+#userNum {
+    
 }
 
 .buttons {
     display:flex;
     justify-content: center;
+    margin: 70px;
+
 }
 
 .footer{
     font-family: 'Righteous', cursive; 
+    margin: 2em;
 }
 
 .instructions{
     font-family: 'Righteous', cursive; 
+}
+
+#compNum {
+    font-family: 'Righteous', cursive;
+}
+
+#userNum {
+    font-family: 'Righteous', cursive;
+}
+
+.history {
+    font-family: 'Righteous', cursive;
+    display: flex;
+    justify-content: center;
+    margin: 1em
 }

@@ -42,7 +42,6 @@ $(document).ready(function () {
     //     resetGame();
     // });
 
-    // look up calculator solution!
 
     if (userNumber < computerGuess ) {
         buttonClicks();
@@ -68,6 +67,7 @@ $(document).ready(function () {
     }
 
     // Main Game Operation
+    // look up calculator solution!
     function buttonClicks() {
         $("#redbutton").on("click", function () {
             console.log('you clicked red!')

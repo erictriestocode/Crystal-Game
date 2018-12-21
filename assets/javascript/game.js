@@ -27,7 +27,8 @@ $(document).ready(function () {
     console.log(greenVal);
     console.log(yellowVal);
 
-
+    mainGame(userNumber,computerGuess);
+    
     // if (userNumber === computerGuess) {
     //     alert('You win!');
     //     wins++;
@@ -43,25 +44,31 @@ $(document).ready(function () {
     // });
 
 
-    if (userNumber < computerGuess ) {
-        buttonClicks();
-    } else if ( userNumber === computerGuess) {
-        alert("You win!");
-        wins++;
-        resetGame();
-    } else {
-        alert('You Lose!')
-        losses++;
-        resetGame();
-    }
+ 
 
-
+    $("#resetButton").on("click"), resetGame();
 
 
     // Game Functions
     //****************************************/
 
-    // have the computer guess its number
+    // have the computer guess its 
+    
+    function mainGame(user,computer){
+        if (user < computer ) {
+            buttonClicks();
+        } else if ( userNumber === computerGuess) {
+            alert("You win!");
+            wins++;
+            resetGame();
+        } else {
+            alert('You Lose!')
+            losses++;
+            resetGame();
+        }
+
+    }
+
     function compNum() {
         computerGuess = Math.floor(Math.random() * (120 - 19) + 19);
     }
